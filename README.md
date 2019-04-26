@@ -1,0 +1,1 @@
+### Warning: don't accept this certificates pernamently in Your browser and don't use this certificate/key pair in production system (because private key is available for anyone, it shuld be used only for test purposes)
