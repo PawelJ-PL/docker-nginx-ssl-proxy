@@ -1,0 +1,8 @@
+server {
+  listen ${LISTEN_PORT} ssl;
+  ssl_certificate /tmp/bundle.crt;
+  ssl_certificate_key /tmp/server.key;
+  location / {
+     proxy_pass http://${HOST_ADDR}:${DST_PORT};
+  }
+}
