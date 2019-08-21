@@ -1,6 +1,9 @@
 #!/bin/bash
 
-export HOST_ADDR=`/sbin/ip route|awk '/default/ { print $3 }'`
+if [ -z "$HOST_ADDR" ]
+then
+    export HOST_ADDR=`/sbin/ip route|awk '/default/ { print $3 }'`
+fi
 
 openssl genrsa -out /tmp/server.key 4096
 
