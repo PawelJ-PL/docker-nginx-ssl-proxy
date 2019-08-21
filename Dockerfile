@@ -8,6 +8,7 @@ RUN apt-get update; \
 ENV LISTEN_PORT=8443
 ENV DST_PORT=80
 ENV CERT_CN=127.0.0.1
+ENV BACKEND_PROTOCOL=http
 
 COPY rootCA.crt /tmp/rootCA.crt
 COPY rootCA.key /tmp/rootCA.key
