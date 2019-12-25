@@ -13,7 +13,7 @@ openssl req -in /tmp/server.csr -noout -text
 echo
 
 echo
-openssl x509 -req -in /tmp/server.csr -CA /tmp/rootCA.crt -CAkey /tmp/rootCA.key -CAcreateserial -out /tmp/server.crt -days 365 -sha256 -passin pass:secret
+openssl x509 -req -in /tmp/server.csr -CA /tmp/rootCA.crt -CAkey /tmp/rootCA.key -CAcreateserial -out /tmp/server.crt -days 365 -sha256 -passin pass:secret -extfile /tmp/sslextfile
 echo "Generated Certificate:"
 openssl x509 -in /tmp/server.crt -text -noout
 echo
